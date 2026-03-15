@@ -70,15 +70,19 @@ docker run -d \
 ### Configurazione `application.properties`
 
 ```properties
+spring.application.name=backend-service-1
+
+
 spring.datasource.url=jdbc:mysql://mysql:3306/appdb
-spring.datasource.username=appuser
-spring.datasource.password=password
+spring.datasource.username=root
+spring.datasource.password=secret
+
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-spring.jpa.open-in-view=false
-spring.security.user.name=admin
-spring.security.user.password=admin
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 ```
 
 ### Configurazione `docker-compose.yaml`
