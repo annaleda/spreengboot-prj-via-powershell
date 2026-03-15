@@ -123,6 +123,11 @@ services:
     networks:
       - app-network
 
+  frontend:
+    build: ./frontend/front-end-app
+    ports:
+      - "4200:80"
+
 volumes:
   db_data:
 
